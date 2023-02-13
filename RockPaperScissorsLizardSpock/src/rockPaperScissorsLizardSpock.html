@@ -21,27 +21,27 @@
             alert("Playerchoice = " + playerChoice);
             document.getElementById("playerChoiceMade").style.display = "block";
             document.getElementById("playerChoice").style.display = "none";
-            document.getElementById("playerChoiceMade").innerHTML = "<img src='../images/" + playerChoice + ".jpg'>";
+            document.getElementById("playerChoiceMade").innerHTML = "<img src='../images/" + playerChoice + ".jpg' class='choiceCards'>";
 
             computerChoice = Math.floor(Math.random() * choices.length);
             if (computerChoice === 0) {
-                document.getElementById("computerChoice").innerHTML = "<img src='../images/papier.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/papier.jpg' class='choiceCards'>";
                 computerChoice = "papier";
                 alert("Computerchoice = " + computerChoice);
             } else if (computerChoice === 1) {
-                document.getElementById("computerChoice").innerHTML = "<img src='../images/steen.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/steen.jpg' class='choiceCards'>";
                 computerChoice = "steen";
                 alert("Computerchoice = " + computerChoice);
             } else if (computerChoice === 2) {
-                document.getElementById("computerChoice").innerHTML = "<img src='../images/schaar.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/schaar.jpg' class='choiceCards'>";
                 computerChoice = "schaar";
                 alert("Computerchoice = " + computerChoice);
             } else if (computerChoice === 3) {
-                document.getElementById("computerChoice").innerHTML = "<img src='../images/hagedis.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/hagedis.jpg' class='choiceCards'>";
                 computerChoice = "hagedis";
                 alert("Computerchoice = " + computerChoice);
             } else {
-                document.getElementById("computerChoice").innerHTML = "<img src='../images/spok.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/spok.jpg' class='choiceCards'>";
                 computerChoice = "spok";
                 alert("Computerchoice = " + computerChoice);
             }
