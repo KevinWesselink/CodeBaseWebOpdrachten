@@ -14,7 +14,7 @@
         let playerWin = 0;
         let computerWin = 0;
         let round = 1;
-        const choices = ["steen", "papier", "schaar"];
+        const choices = ["steen", "papier", "schaar", "hagedis", "spok"];
 
         function startGame(value) {
             playerChoice = value;
@@ -32,9 +32,17 @@
                 document.getElementById("computerChoice").innerHTML = "<img src='../images/steen.jpg'>";
                 computerChoice = "steen";
                 alert("Computerchoice = " + computerChoice);
-            } else {
+            } else if (computerChoice === 2) {
                 document.getElementById("computerChoice").innerHTML = "<img src='../images/schaar.jpg'>";
                 computerChoice = "schaar";
+                alert("Computerchoice = " + computerChoice);
+            } else if (computerChoice === 3) {
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/hagedis.jpg'>";
+                computerChoice = "hagedis";
+                alert("Computerchoice = " + computerChoice);
+            } else {
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/spok.jpg'>";
+                computerChoice = "spok";
                 alert("Computerchoice = " + computerChoice);
             }
 
@@ -45,10 +53,18 @@
                     setTimeout(lose, 1000);
                     computerWin++;
                     document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
-                } else {
+                } else if (computerChoice === "schaar") {
                     setTimeout(win, 1000);
                     playerWin++;
                     document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                } else if (computerChoice === "hagedis") {
+                    setTimeout(win, 1000);
+                    playerWin++;
+                    document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                } else {
+                    setTimeout(lose, 1000);
+                    computerWin++;
+                    document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
                 }
             }
 
@@ -59,10 +75,18 @@
                     document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
                 } else if (computerChoice === "papier") {
                     setTimeout(draw, 1000);
-                } else {
+                } else if (computerChoice === "schaar") {
                     setTimeout(lose, 1000);
                     computerWin++;
                     document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
+                } else if (computerChoice === "hagedis") {
+                    setTimeout(lose, 1000);
+                    computerWin++;
+                    document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
+                } else {
+                    setTimeout(win, 1000);
+                    playerWin++;
+                    document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
                 }
             }
 
@@ -75,6 +99,58 @@
                     setTimeout(win, 1000);
                     playerWin++;
                     document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                } else if (computerChoice === "schaar") {
+                    setTimeout(draw, 1000);
+                } else if (computerChoice === "hagedis") {
+                    setTimeout(win, 1000);
+                    playerWin++;
+                    document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                } else {
+                    setTimeout(lose, 1000);
+                    computerWin++;
+                    document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
+                }
+            }
+
+            if (playerChoice === "hagedis") {
+                if (computerChoice === "steen") {
+                    setTimeout(lose, 1000);
+                    computerWin++;
+                    document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
+                } else if (computerChoice === "papier") {
+                    setTimeout(win, 1000);
+                    playerWin++;
+                    document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                } else if (computerChoice === "schaar") {
+                    setTimeout(lose, 1000);
+                    computerWin++;
+                    document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
+                } else if (computerChoice === "hagedis") {
+                    setTimeout(draw, 1000);
+                } else {
+                    setTimeout(win, 1000);
+                    playerWin++;
+                    document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                }
+            }
+
+            if (playerChoice === "spok") {
+                if (computerChoice === "steen") {
+                    setTimeout(win, 1000);
+                    playerWin++;
+                    document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                } else if (computerChoice === "papier") {
+                    setTimeout(lose, 1000);
+                    computerWin++;
+                    document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
+                } else if (computerChoice === "schaar") {
+                    setTimeout(win, 1000);
+                    playerWin++;
+                    document.getElementById("playerWin").innerHTML = "Je hebt momenteel " + playerWin + " keer gewonnen!";
+                } else if (computerChoice === "hagedis") {
+                    setTimeout(lose, 1000);
+                    computerWin++;
+                    document.getElementById("computerWin").innerHTML = "De computer heeft momenteel " + computerWin + " keer gewonnen!";
                 } else {
                     setTimeout(draw, 1000);
                 }
@@ -131,6 +207,8 @@
         <input type="image" src="../images/steen.jpg" alt="" value="steen" name="playerChoice" class="choiceCards" onclick="startGame('steen')">
         <input type="image" src="../images/papier.jpg" alt="" value="papier" name="playerChoice" class="choiceCards" onclick="startGame('papier')">
         <input type="image" src="../images/schaar.jpg" alt="" value="schaar" name="playerChoice" class="choiceCards" onclick="startGame('schaar')">
+        <input type="image" src="../images/hagedis.jpg" alt="" value="hagedis" name="playerChoice" class="choiceCards" onclick="startGame('hagedis')">
+        <input type="image" src="../images/spok.jpg" alt="" value="spok" name="playerChoice" class="choiceCards" onclick="startGame('spok')">
 
         Speler 1
     </div>
