@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css?=v100220231416">
+    <link rel="stylesheet" href="../css/style.css?=v100220231416">
     <title>Steen Papier Schaar Hagedis Spok</title>
 
     <script>
@@ -21,19 +21,19 @@
             alert("Playerchoice = " + playerChoice);
             document.getElementById("playerChoiceMade").style.display = "block";
             document.getElementById("playerChoice").style.display = "none";
-            document.getElementById("playerChoiceMade").innerHTML = "<img src='images/" + playerChoice + ".jpg'>";
+            document.getElementById("playerChoiceMade").innerHTML = "<img src='../images/" + playerChoice + ".jpg'>";
 
             computerChoice = Math.floor(Math.random() * choices.length);
             if (computerChoice === 0) {
-                document.getElementById("computerChoice").innerHTML = "<img src='images/papier.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/papier.jpg'>";
                 computerChoice = "papier";
                 alert("Computerchoice = " + computerChoice);
             } else if (computerChoice === 1) {
-                document.getElementById("computerChoice").innerHTML = "<img src='images/steen.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/steen.jpg'>";
                 computerChoice = "steen";
                 alert("Computerchoice = " + computerChoice);
             } else {
-                document.getElementById("computerChoice").innerHTML = "<img src='images/schaar.jpg'>";
+                document.getElementById("computerChoice").innerHTML = "<img src='../images/schaar.jpg'>";
                 computerChoice = "schaar";
                 alert("Computerchoice = " + computerChoice);
             }
@@ -114,8 +114,6 @@
                 }
             }
         }
-
-
     </script>
 </head>
 <body>
@@ -130,9 +128,9 @@
     </div>
 
     <div class="player" id="playerChoice">
-        <input type="image" src="images/steen.jpg" alt="" value="steen" name="playerChoice" class="choiceCards" onclick="startGame('steen')">
-        <input type="image" src="images/papier.jpg" alt="" value="papier" name="playerChoice" class="choiceCards" onclick="startGame('papier')">
-        <input type="image" src="images/schaar.jpg" alt="" value="schaar" name="playerChoice" class="choiceCards" onclick="startGame('schaar')">
+        <input type="image" src="../images/steen.jpg" alt="" value="steen" name="playerChoice" class="choiceCards" onclick="startGame('steen')">
+        <input type="image" src="../images/papier.jpg" alt="" value="papier" name="playerChoice" class="choiceCards" onclick="startGame('papier')">
+        <input type="image" src="../images/schaar.jpg" alt="" value="schaar" name="playerChoice" class="choiceCards" onclick="startGame('schaar')">
 
         Speler 1
     </div>
