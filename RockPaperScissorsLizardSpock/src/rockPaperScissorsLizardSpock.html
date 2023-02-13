@@ -155,18 +155,19 @@
                     setTimeout(draw, 1000);
                 }
             }
-
-            round++;
+            
             setTimeout(nextRound, 3000)
 
             function win() {
                 alert("Je hebt gewonnen!");
                 console.log("Je hebt gewonnen!");
+                round++;
             }
 
             function lose() {
                 alert("Je hebt verloren!");
                 console.log("Je hebt verloren!");
+                round++;
             }
 
             function draw() {
