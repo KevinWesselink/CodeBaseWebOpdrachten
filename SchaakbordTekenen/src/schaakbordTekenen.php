@@ -13,7 +13,12 @@
 
     <?php
 
-    echo "Hallo";
+    for ($row = 0; $row < 8; $row++) {
+        //
+        for ($column = 0; $column < 8; $column++) {
+            //
+        }
+    }
 
     ?>
 
