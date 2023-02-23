@@ -5,22 +5,28 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style.css?=v160220231552">
+    <link rel="stylesheet" href="../css/style.css?=v220220231342">
     <title>Schaakbord Tekenen</title>
 </head>
 <body>
     <h1>Schaakbord Tekenen</h1>
-
+    <table>
     <?php
 
-    for ($row = 0; $row < 8; $row++) {
-        //
-        for ($column = 0; $column < 8; $column++) {
-            //
+    for ($row = 1; $row <= 8; $row++) {
+        echo "<tr>";
+        for ($column = 1; $column <= 8; $column++) {
+            $total = $row + $column;
+            if ($total % 2 == 0) {
+                echo "<td class='black'>";
+            } else {
+                echo "<td class='white'>";
+            }
         }
     }
 
     ?>
 
+    </table>
 </body>
 </html>
