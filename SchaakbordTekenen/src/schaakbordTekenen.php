@@ -18,9 +18,9 @@
         for ($column = 1; $column <= 8; $column++) {
             $total = $row + $column;
             if ($total % 2 == 0) {
-                echo "<td class='black'>";
+                echo "<td class='black'></td>";
             } else {
-                echo "<td class='white'>";
+                echo "<td class='white'></td>";
             }
         }
     }
